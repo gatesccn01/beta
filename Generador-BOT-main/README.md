@@ -1,8 +1,3 @@
-# Generador-BOT
+19-feb-2023
 
-Codigo libre para generar BOT GEN partiendo de un script basico
-
-#Correcciones paulatinas e instalacion directa
-
-
-wget https://raw.githubusercontent.com/NetVPS/Generador-BOT/main/Instalador/install.sh ; chmod +rwx install.sh; ./install.sh --install
+wget https://raw.githubusercontent.com/gatesccn01/beta/main/Generador-BOT-main/Instalador/install.sh ; chmod +rwx install.sh; ./install.sh --install

@@ -318,7 +318,7 @@ function_verify() {
     unset keybot
     msg -bar
     [[ ! -e /etc/nivbot ]] && echo >/etc/nivbot
-    echo -e "\e[31m          BOTGEN LIBRE TE LO VENDIERON ?\e[32m"
+    echo -e "\e[31m          TODO BIEN ?\e[32m"
     [[ "$(echo "$(cat </etc/nivbot)")" < "3" ]] && {
         [[ -e /bin/downloadbot ]] && {
             [[ -z $(cat </bin/downloadbot) ]] && read -p " DIGITE SI O NO : " keybot || unset keybot
@@ -339,7 +339,7 @@ function_verify() {
         echo -e "\n"
         echo -e "\e[31m    LA IP $(wget -qO- ipv4.icanhazip.com) FUE RECHAZADA!"
         echo -e " $link No AUTORIZADA el ACCESO "
-        echo -e " SI DESEAS USAR EL BOTGEN CONTACTE A @ChumoGH"
+        echo -e " SI DESEAS USAR EL BOTGEN CONTACTE A @gatesccn"
         msg -bar
         [[ -e "/bin/ShellBot.sh" ]] && rm /bin/ShellBot.sh
         [[ -e /bin/downloadbot ]] && rm -f /bin/downloadbot

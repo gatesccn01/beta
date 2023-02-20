@@ -283,8 +283,8 @@ LIST="-SPVweN"
 wget -O /bin/ejecutar/v-new.log https://raw.githubusercontent.com/gatesccn01/GH-5.7u/main/adm-lite/v-local.log &>/dev/null
 v1=$(cat /bin/ejecutar/v-new.log)
 v2=$(cat <${SCPT_DIR}/v-local.log)
-txt[315]=" ${FlT} ChumoGH Keygen ${FlT} IS UPDATED!"
-txt[316]=" ${aLerT} ChumoGH Keygen ${aLerT} NEEDS UPDATE!"
+txt[315]=" ${FlT} GATESCCN Keygen ${FlT} IS UPDATED!"
+txt[316]=" ${aLerT} GATESCCN Keygen ${aLerT} NEEDS UPDATE!"
 
 meu_ip() {
     MIP=$(ip addr | grep 'inet' | grep -v inet6 | grep -vE '127\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}' | grep -o -E '[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}' | head -1)
@@ -761,7 +761,7 @@ dropIP() {
     unset PIDGEN
     if [[ -e /var/www/html/ChumoGH/VPSbot/main/TeleBotGen/Control/Control-Bot ]]; then
         echo -e "[Unit]
-Description=BotGen Service by @ChumoGH
+Description=BotGen Service by @GATESCCN
 After=network.target
 StartLimitIntervalSec=0
 
@@ -805,7 +805,7 @@ menau() {
         figlet -f smslant "$(cat </etc/valkey)" | lolcat
         msg -bar
     } || {
-        figlet -p -f smslant "@ChumoGH" | lolcat
+        figlet -p -f smslant "@GATESCCN" | lolcat
         msg -bar
     }
     [[ ! $PID_GEN ]] && PID_GEN="\033[0;35m[\033[0;31mDETENIDO\033[0;35m]" || PID_GEN="\033[0;35m[\033[0;36mWORKING\033[0;35m]"

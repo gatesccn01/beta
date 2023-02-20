@@ -44,7 +44,7 @@ tittle() {
     [[ -z $1 ]] && rt='adm-lite' || rt='ADMcgh'
     clear && clear
     msg -bar
-    echo -e "\033[1;44;44m   \033[1;33m=====>>►► 🐲 ChumoGH 💥 Plus 🐲 ◄◄<<=====  \033[0m \033[0;33m[$(less /etc/${rt}/v-local.log)]"
+    echo -e "\033[1;44;44m   \033[1;33m=====>>►► 🐲 BolScript 💥 Plus 🐲 ◄◄<<=====  \033[0m \033[0;33m[$(less /etc/${rt}/v-local.log)]"
     msg -bar
 }
 in_opcion() {

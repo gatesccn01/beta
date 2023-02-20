@@ -498,7 +498,7 @@ echo "Respaldando TOKEN y ADMINISTRADOR"
 [[ -e /etc/ADM-db/User-ID ]] && mv /etc/ADM-db/User-ID /root/User-ID
 [[ -e /etc/ADM-db/ress ]] && mv /etc/ADM-db/ress /root/ress
 [[ -e /etc/ADM-db/sources/costes ]] && mv /etc/ADM-db/sources/costes /root/costes
-[[ $(cat < /etc/ADM-db/resell) != "@ChumoGH" ]] && mv /etc/ADM-db/resell /root/resell
+[[ $(cat < /etc/ADM-db/resell) != "@gatesccn" ]] && mv /etc/ADM-db/resell /root/resell
 rm -rf /etc/ADM-db/sources/gerar_key && download
 }
 

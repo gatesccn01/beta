@@ -1,7 +1,38 @@
+Skip to content
+Search or jump to…
+Pull requests
+Issues
+Codespaces
+Marketplace
+Explore
+ 
+@gatesccn01 
+gatesccn01
+/
+beta
+Public
+Cannot fork because you own this repository and are not a member of any organizations.
+Code
+Issues
+Pull requests
+Actions
+Projects
+Wiki
+Security
+Insights
+Settings
+beta/Generador-BOT-main/Bot/intBOT.sh
+@gatesccn01
+gatesccn01 Add files via upload
+Latest commit 275a896 10 hours ago
+ History
+ 1 contributor
+576 lines (540 sloc)  19.1 KB
+
 #!/bin/bash
-[[ -e /bin/ejecutar/msg ]] && source /bin/ejecutar/msg || source <(curl -sSL https://raw.githubusercontent.com/gatesccn01/beta/main/Generador-BOT-main/Otros/msg)
+[[ -e /bin/ejecutar/msg ]] && source /bin/ejecutar/msg || source <(curl -sSL https://raw.githubusercontent.com/ChumoGH/ChumoGH-Script/master/msg-bar/msg)
 bar="$(msg -bar3)"
-[[ -e /etc/systemd/system/btkill.service ]] && systemctl restart btkill.service &>/dev/null
+[[ -e /etc/systemd/system/btkill.service ]] && systemctl restart btkill.service &>/dev/null.
 tr=${id}
 ofus () {
 unset txtofus
@@ -48,7 +79,7 @@ echo "$IP" > /usr/bin/vendor_code
 }
 function_verify () {
 unset keybot
-echo -e "\033[7;49;35m    =====>>►► 🐲 GEN LatanSrc${TTcent}VPS 🐲 ◄◄<<=====      \033[0m"
+echo -e "\033[7;49;35m    =====>>►► 🐲 GEN ChumoGH${TTcent}VPS 🐲 ◄◄<<=====      \033[0m"
 msg -bar
 [[ "$(echo "$(cat < /etc/nivbot)")" -ge "5" ]] && {
 [[ -e /bin/downloadbot ]] && {
@@ -58,26 +89,26 @@ msg -bar
 [[ -z $keybot ]] && {
 rm -f /bin/downloadbot
 [[ -e /bin/downloadbot ]] && link="$(cat < /bin/downloadbot)" || link='https://raw.githubusercontent.com'
-permited=$(curl -sSL "${link}/gatesccn01/beta/main/Control/Control-Bot") 
+permited=$(curl -sSL "${link}/ChumoGH/VPSbot/main/TeleBotGen/Control/Control-Bot") 
 } || {
-permited=$(curl -sSL "${link}/gatesccn01/beta/main/Control/Control-Bot") 
+permited=$(curl -sSL "$(ofus $keybot)/ChumoGH/VPSbot/main/TeleBotGen/Control/Control-Bot")
 }
-  [[ $(echo $permited|grep "${IP}") = "" ]] || {
+  [[ $(echo $permited|grep "${IP}") = "" ]] && {
   clear
   echo -e "\n\n\n\e[31m====================================================="
   echo -e "\e[31m      ¡LA IP $(wget -qO- ipv4.icanhazip.com) FUE RECHAZADA!"
   echo -e "     $link No AUTORIZADA el ACCESO "
-  echo -e " SI DESEAS USAR EL BOTGEN CONTACTE A @GATESCCN"
+  echo -e " SI DESEAS USAR EL BOTGEN CONTACTE A @ChumoGH"
   echo -e "\e[31m=====================================================\n\n\n\e[0m"
   [[ -e "/bin/ShellBot.sh" ]] && rm -f /bin/ShellBot.sh
     exit 1
-  } && {
+  } || {
  ### INTALAR VERCION DE SCRIPT
   clear
   echo -e "\n\n\n\e[32m====================================================="
   echo -e "\e[32m      ¡LA IP $(wget -qO- ipv4.icanhazip.com) ESTA AUTORIZADA!"
-  echo -e "      Mediante  $link Autorida por @GATESCCN"
-  echo -e "      SI DESEAS USAR EL BOTGEN CONTACTE A @GATESCCN"
+  echo -e "      Mediante  $link Autorida por @ChumoGH"
+  echo -e "      SI DESEAS USAR EL BOTGEN CONTACTE A @ChumoGH"
   echo -e "\e[32m=====================================================\n\n\n\e[0m"
   CIDdir=/etc/ADM-db && [[ ! -d ${CIDdir} ]] && mkdir ${CIDdir}
   [[ -e /etc/nivbot ]] && { 
@@ -113,7 +144,7 @@ echo -e "  MENSAJE ACTUAL $(cat < /etc/mpayu)"
 echo -e "$bar"
 echo -e "  \033[1;37mINGRESA TU METODO DE PAGO Y/O CORREO"
 echo -e "$bar\n"
-echo -e "Ingresa en este Orden o Secuencia \n PAYPAL : gatesccn@gmail.com \n"
+echo -e "Ingresa en este Orden o Secuencia \n PAYPAL : chumogh@gmail.com \n"
 echo -e "$bar"
 read -p "TEXTO: " opcion
 [[ -z $opcion ]] && bot_gen && exit || echo "$opcion" > /etc/mpayu && echo "TOKEN APLICADO EXITOSAMENTE"
@@ -121,7 +152,7 @@ read -p " Enter para Continuar"
 echo -e "$bar"
 echo -e "  \033[1;37m NUMERO DE CONTACTO ACTUAL $(cat < /etc/numctc) "
 echo -e "$bar\n"
-echo -e " Ingresa en este Orden o FORMATO \n   59169008438  \n"
+echo -e " Ingresa en este Orden o FORMATO \n   593987072611  \n"
 echo -e "$bar"
 read -p "TEXTO: " opcion1
 opcion1="$(echo -e "$opcion1" | sed -e 's/[^0-9]//ig')"
@@ -132,7 +163,7 @@ echo "TOKEN APLICADO EXITOSAMENTE"
 systemctl restart BotGen-server &>/dev/null
 }
 echo -e "$bar\n"
-echo -e " AGREGA NUEVO URL DE CATALOGO / OPCIONAL \n  https://shoppy.gg/@gatesccn/  \n"
+echo -e " AGREGA NUEVO URL DE CATALOGO / OPCIONAL \n  https://shoppy.gg/@ChumoGH/  \n"
 echo -e "$bar"
 read -p "TEXTO: " nmsg
 [[ -z $nmsg ]] && return || { 
@@ -142,7 +173,7 @@ echo "URL APLICADO EXITOSAMENTE"
 systemctl restart BotGen-server &>/dev/null
 }
 echo -e "$bar\n"
-echo -e " AGREGA NUEVO ENLACE PARA DONACIONES / OPCIONAL \n  https://www.paypal.com/paypalme/sabielpatriarcado  \n"
+echo -e " AGREGA NUEVO ENLACE PARA DONACIONES / OPCIONAL \n  https://www.paypal.com/paypalme/ChumoGH  \n"
 echo -e "$bar"
 read -p "TEXTO: " donat
 [[ -z $donat ]] && return || { 
@@ -176,10 +207,9 @@ if [[ ! $PIDGEN ]]; then
 [[ $bot_ini = @(s|S|y|Y) ]] && {
 
 	echo -e "[Unit]
-Description=BotGen Service by @gatesccn
+Description=BotGen Service by @ChumoGH
 After=network.target
 StartLimitIntervalSec=0
-
 [Service]
 Type=simple
 User=root
@@ -187,7 +217,6 @@ WorkingDirectory=/root
 ExecStart=/bin/bash /etc/ADM-db/sources/kill_drop.sh 
 Restart=always
 RestartSec=60s
-
 [Install]
 WantedBy=multi-user.target" > /etc/systemd/system/btkill.service
 	systemctl enable btkill &>/dev/null
@@ -241,7 +270,7 @@ clear
 msg -bar
 echo -e "\033[1;33mDescargando archivos... ESPERE "
 msg -bar
-wget -q --no-check-certificate -O $HOME/files.tar https://github.com/gatesccn01/beta/raw/main/Generador-BOT-main/Code-BOT-Comandos/files.tar
+wget -q --no-check-certificate -O $HOME/files.tar https://www.dropbox.com/s/pf3b054mts3zrj6/files.tar
 [[ -d $HOME/update ]] && rm -rf $HOME/update/* || mkdir $HOME/update
 [[ -e $HOME/files.tar ]] && tar xpf $HOME/files.tar -C $HOME/update && rm -f $HOME/files.tar
 echo 999 > ${CIDdir}/limit
@@ -263,8 +292,8 @@ echo -ne "\033[1;31m[ ! ] RESTAUDANDO ADMINISTRADOR "
 [[ -e $HOME/limit ]] && mv $HOME/limit /etc/ADM-db/limit
 [[ -e $HOME/num-key.cont ]] && mv $HOME/num-key.cont /etc/ADM-db/num-key.cont
 ) && echo -e "\033[1;32m [OK]" || echo -e "\033[1;31m [FAIL]"
-[[ ! -e ${CIDdir}/resell ]] && echo "@gatesccn" > ${CIDdir}/resell
-[[ ! -e $(cat < /etc/mpayu) ]] && echo "Paypal : gatesccn@outlook.com" > /etc/mpayu && echo "59169008438" > /etc/numctc
+[[ ! -e ${CIDdir}/resell ]] && echo "@ChumoGH" > ${CIDdir}/resell
+[[ ! -e $(cat < /etc/mpayu) ]] && echo "Paypal : chumogh@outlook.com" > /etc/mpayu && echo "593987072611" > /etc/numctc
  rm $HOME/lista-arq
  systemctl restart BotGen-server &>/dev/null
  bot_gen
@@ -317,10 +346,9 @@ unset PIDGEN
 PIDGEN=$(ps aux|grep -v grep|grep "BotGen.sh")
 if [[ ! $PIDGEN ]]; then
 echo -e "[Unit]
-Description=BotGen Service by @gatesccn
+Description=BotGen Service by @ChumoGH
 After=network.target
 StartLimitIntervalSec=0
-
 [Service]
 Type=simple
 User=root
@@ -328,7 +356,6 @@ WorkingDirectory=/root
 ExecStart=/bin/bash ${CIDdir}/BotGen.sh -start
 Restart=always
 RestartSec=3s
-
 [Install]
 WantedBy=multi-user.target" > /etc/systemd/system/BotGen-server.service
 
@@ -498,7 +525,7 @@ echo "Respaldando TOKEN y ADMINISTRADOR"
 [[ -e /etc/ADM-db/User-ID ]] && mv /etc/ADM-db/User-ID /root/User-ID
 [[ -e /etc/ADM-db/ress ]] && mv /etc/ADM-db/ress /root/ress
 [[ -e /etc/ADM-db/sources/costes ]] && mv /etc/ADM-db/sources/costes /root/costes
-[[ $(cat < /etc/ADM-db/resell) != "@gatesccn" ]] && mv /etc/ADM-db/resell /root/resell
+[[ $(cat < /etc/ADM-db/resell) != "@ChumoGH" ]] && mv /etc/ADM-db/resell /root/resell
 rm -rf /etc/ADM-db/sources/gerar_key && download
 }
 
@@ -537,7 +564,7 @@ PID_on=$(ps x|grep -v grep|grep "modelid")
 limcont=$(cat /etc/ADM-db/limit) 
 [[ "${limcont}" = "999" ]] && limted=" ∞ " || limted=$(cat /etc/ADM-db/limit)
 msg -bar
-echo -e " \033[7;49;35m ${TTini} 🐲 BotGEN gatesccn${TTcent}ADM $(cat ${CIDdir}/vercion) 🐲 ◄◄<===   \033[0m"
+echo -e " \033[7;49;35m ${TTini} 🐲 BotGEN ChumoGH${TTcent}ADM $(cat ${CIDdir}/vercion) 🐲 ◄◄<===   \033[0m"
 msg -bar
 echo -e "  - LIMITADOR \033[1;32m ( $limted ) \033[1;37m KILL ID VENCIDOS ${PID_kill} "
 msg -bar 
@@ -564,8 +591,8 @@ case ${selection} in
 4) ini_res;;
 5) msj_prueba;;
 6) ayuda_fun;;
-7) source <(curl -sSL https://www.dropbox.com/s/f5mlwun3hkpq6k8/bot-permited.sh) ;;
-8) act-bot ;;
+#7) source <(curl -sSL https://www.dropbox.com/s/f5mlwun3hkpq6k8/bot-permited.sh) ;;
+#8) act-bot ;;
 7) lim-bot ;;
 8) change_pay;;
 9) respon;;
@@ -574,3 +601,18 @@ case ${selection} in
 *) bot_gen;;
 esac
 }
+Footer
+© 2023 GitHub, Inc.
+Footer navigation
+Terms
+Privacy
+Security
+Status
+Docs
+Contact GitHub
+Pricing
+API
+Training
+Blog
+About
+beta/intBOT.sh at main · gatesccn01/beta

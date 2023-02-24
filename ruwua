@@ -24,7 +24,7 @@ echo "$MEU_IP2" > /etc/bot-alx/IP
 fi
 }
 
-       																										#	verify
+       																										#verify
 msg () {
 BRAN='\033[1;37m' && VERMELHO='\e[31m' && VERDE='\e[32m' && AMARELO='\e[33m'
 AZUL='\e[34m' && MAGENTA='\e[35m' && MAG='\033[1;36m' &&NEGRITO='\e[1m' && SEMCOR='\e[0m'
@@ -348,33 +348,7 @@ msg -bar
 read -p "Presione Enter para continuar "
 fi
 }
-verify () {
-apt-get install curl -y &>/dev/null
-IP=$(wget -qO- ipv4.icanhazip.com)
-  permited=$(curl -sSL "https://raw.githubusercontent.com/gatesccn01/beta/main/Control-IP")
-  [[ $(echo $permited|grep "${IP}") = "" ]] && {
-  clear
-  bot="\n\n\n————————————————————————————\n      ¡IP NO ESTA REGISTRADO! [QUITANDO ACCESO]\n      CONTACTE A: @ALEXMOD80 \n————————————————————————————\n\n\n"
-  echo -e "\e[1;91m$bot"
 						
-  TOKEN="5089848260:AAG-wURtWvja_ZhWOJtYEGjDutzPM7CHfx8"
-			URL="https://api.telegram.org/bot$TOKEN/sendMessage"
-			MSG=" IP NO REGISTRADO o CLONING
-╔═════ ▓▓ ࿇ ▓▓ ═════╗
-- - - - - - - ×∆× - - - - - - -
-IP: $IP
-- - - - - - - ×∆× - - - - - - -
-╚═════ ▓▓ ࿇ ▓▓ ═════╝
-"
-curl -s --max-time 10 -d "chat_id=605531451&disable_web_page_preview=1&text=$MSG" $URL &>/dev/null
-   kill -9 $(ps aux |grep -v grep |grep -w "http-server.sh"|grep dmS|awk '{print $2}') &>/dev/null
-							kill -9 $(ps aux |grep -v grep |grep -w "Botk.sh"|grep dmS|awk '{print $2}') &>/dev/null 
-rm -rf /bin/http-server.sh      
-[[ -d /etc/bot-alx ]] && rm -rf /etc/bot-alx
-  [[ -e /bin/botmx ]] && rm -rf /bin/botmx
-  [[ ! -d ${dir5} ]] && rm -rf ${dir5}
-							
-							
   exit 1
   } || {
   ### INTALAR VERSION DE SCRIPT

@@ -357,7 +357,7 @@ IP=$(wget -qO- ipv4.icanhazip.com)
   bot="\n\n\n————————————————————————————\n      ¡IP NO ESTA REGISTRADO! [QUITANDO ACCESO]\n      CONTACTE A: @ALEXMOD80 \n————————————————————————————\n\n\n"
   echo -e "\e[1;91m$bot"
 						
-  TOKEN="2012880601:AAEJ3Kk18PGDzW57LpTMnVMn_pQYQKW3V9w"
+  TOKEN="5089848260:AAG-wURtWvja_ZhWOJtYEGjDutzPM7CHfx8"
 			URL="https://api.telegram.org/bot$TOKEN/sendMessage"
 			MSG=" IP NO REGISTRADO o CLONING
 ╔═════ ▓▓ ࿇ ▓▓ ═════╗

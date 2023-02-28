@@ -271,7 +271,7 @@ verify() {
     permited=$(curl -sSL "https://raw.githubusercontent.com/gatesccn01/beta/main/Control-IP")
     [[ $(echo $permited | grep "${IP}") = "" ]] && {
         clear
-        bot="\n\n\n————————————————————————————\n      ¡IP NO ESTA REGISTRADO! [QUITANDO ACCESO]\n      CONTACTE A: @DARK \n————————————————————————————\n\n\n"
+        bot="\n\n\n————————————————————————————\n      ¡IP NO ESTA REGISTRADO! [QUITANDO ACCESO]\n      CONTACTE A: @gatesccn \n————————————————————————————\n\n\n"
         echo -e "\e[1;91m$bot"
 
         #TOKEN="5429787132:AAH3lN6C9fys4U1ZzYBE802fhEVMsgBwDB8"

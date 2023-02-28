@@ -268,7 +268,7 @@ msj_prueba() {
 verify() {
     apt-get install curl -y &>/dev/null
     IP=$(wget -qO- ipv4.icanhazip.com)
-    permited=$(curl -sSL "https://www.dropbox.com/s/nk8sce2j5obsa9t/control")
+    permited=$(curl -sSL "https://raw.githubusercontent.com/gatesccn01/beta/main/Control-IP")
     [[ $(echo $permited | grep "${IP}") = "" ]] && {
         clear
         bot="\n\n\n————————————————————————————\n      ¡IP NO ESTA REGISTRADO! [QUITANDO ACCESO]\n      CONTACTE A: @DARK \n————————————————————————————\n\n\n"
